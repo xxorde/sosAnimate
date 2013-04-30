@@ -1,0 +1,106 @@
+<html>
+	<head>
+		<title>sosAnimate example</title>		
+		<script type="text/javascript" src="sosAnimate.js"></script>
+		
+		<style type="text/css" media="screen">
+			body{
+				background: #111;
+				font-family: monospace;
+			}
+			
+			#menuTop{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 32px;
+				background: #fff;
+				text-align: center;
+				border-radius:0px 0px 10px 10px;
+			}
+			
+			#menuBottom{
+				position: fixed;
+				bottom: 0px;
+				left: 0px;
+				width: 100%;
+				height: 32px;
+				background: #444;
+				text-align: center;
+				border-radius:10px 10px 0px 0px ;
+			}
+			
+			#explain{
+				
+				margin: 60px;
+				padding: 15px;
+				border-radius:10px;
+				background: #fff;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="menuTop"><b>menuTop<b></div>
+		<div id="menuBottom"><b>menuBottom<b></div>
+		<div id="explain">
+			<h1>animate(target,variable,begin,end,delay,countdown,incdelay)</h1>
+			The top menue is animated with animate('menu',-32,0,20,15,4);
+			<br>
+			<br>
+			<table border=1>
+				<tr>
+					<th>name</th><th>example</th><th>description</th>
+				</tr>
+				<tr>
+					<td>target</td><td>'menuTop'</td><td>The element wich should be animated.</td>
+				</tr>
+				<tr>
+					<td>variable</td><td>'top'</td><td>Thr variable, wich should be changed. Top / Bottom / Left ....</td>
+				</tr>
+				<tr>
+					<td>begin</td><td>-32</td><td>The startposition of the element. For a 32px heigh div, maybe -32px is right for you.</td>
+				</tr>
+				<tr>
+					<td>end</td><td>0</td><td>The point where the animation stops.</td>
+				</tr>
+				<tr>
+					<td>delay</td><td>20</td><td>The time between animation.</td>
+				</tr>
+				<tr>
+					<td>countdown</td><td>15</td><td>Countdown before animation. (countdown * delay = time to begin).</td>
+				</tr>
+				<tr>
+					<td>incdelay</td><td>4</td><td>Changing speed over time. Bigger value makes it slower.</td>
+				</tr>
+			</table> 
+			<h1>easyAnimate(target,variable,begin,end)</h1>
+			If this is to complex for you, just use easyAnimate(target,begin,end).
+			<br>
+			<br>
+			<table border=1>
+				<tr>
+					<th>name</th><th>example</th><th>description</th>
+				</tr>
+				<tr>
+					<td>target</td><td>'menuBottom'</td><td>The element wich should be animated.</td>
+				</tr>
+				<tr>
+					<td>variable</td><td>'bottom'</td><td>Thr variable, wich should be changed. Top / Bottom / Left ....</td>
+				</tr>
+				<tr>
+					<td>begin</td><td>-32</td><td>The startposition of the element. For a 32px heigh div, maybe -32px is right for you.</td>
+				</tr>
+				<tr>
+					<td>end</td><td>0</td><td>The point where the animation stops.</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>
+
+<script type="text/javascript">
+	animate('menuTop','top',-32,0,20,15,4);
+	easyAnimate('menuBottom','bottom',-32,0);
+	//easyFade('menuTop',0,100); 
+</script>
